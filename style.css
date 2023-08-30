@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,4 +9,95 @@
 html,body{
     height: 100%;
     width: 100%;
+    font-family: 'Jost', sans-serif;
+}
+
+#main{
+    position: relative;
+    overflow: hidden;
+}
+
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+    position: relative;
+}
+
+#page1 video{
+    height: 100%;
+    width: 100%;
+object-fit: cover;
+}
+
+#page1>nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+    padding-top: 13px;
+    padding-right: 80px;
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+}
+
+#page1>nav>img{
+    margin-top: -3vw;
+    margin-left: -7vw;
+    width: 14%;
+}
+
+#right-nav>button{
+    color: #fff;
+    padding: 12px 27px;
+    border-radius:50px;
+    background-color: #283edd;
+    border: 1px solid #6078e8;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#page1-bottom{
+    position: absolute;
+    bottom: 7%;
+    left: 9.5%;
+    height: 47vh;
+    width: 45vw;
+    color: #fff;
+}
+
+#page1-bottom>h1{
+    color: #fff;
+    font-size: 105px;
+    font-weight: 300;
+    line-height: 1;
+
+}
+
+#bottom-btn{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -4%;
+    height: 35%;
+    width: 100%;
+    padding-right: 100px;
+}
+
+#bottom-btn button{
+    padding: 20px 50px;
+    background-color: #fff;
+    color: #6078e8;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    border:none
+}
+
+#bottom-btn>h2{
+    font-size: 21px;
+    font-weight: 300;
 }

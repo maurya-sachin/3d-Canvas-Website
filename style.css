@@ -15,6 +15,7 @@ html,body{
 #main{
     position: relative;
     overflow: hidden;
+    background-color: #2237ca;
 }
 
 /* -------------------------------page1--------------------------------------- */
@@ -143,3 +144,31 @@ object-fit: cover;
     position: relative;
 }
 
+/* ------------------------page4-------------------------------- */
+
+#page4{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: start;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color:#2237ca;
+    color: #fff;
+    padding: 4vh 9vw;
+}
+
+#page4>h3{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 2vw;
+}
+
+#page4>h1{
+    width: 98%;
+    font-size: 4vw;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #4663d83b;
+}

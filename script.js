@@ -45,11 +45,11 @@ gsap.to("#page2>h1>span",{
         start:'top bottom',
         end:'bottom top',
         scroller:'#main',
-        scrub:0.5,
+        scrub:0.1,
         // markers:true
     },
     color:'#fff',
-    stagger:0.2
+    stagger:0.1
 })
 
 
@@ -219,10 +219,181 @@ gsap.to("#page4>h1>span",{
       start:`top bottom`,
       end:`bottom top`,
       scroller:`#main`,
-      scrub:.5,
+      scrub:.1,
   },
-  stagger:.2,
+  stagger:.1,
   color:`#fff`
 })
 
+function canvas1(){
+  const canvas = document.querySelector("#page5>canvas");
+const context = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
+window.addEventListener("resize", function () {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+render();
+});
+
+function files(index) {
+var data = `
+./resources/bridges00004.png
+./resources/bridges00007.png
+./resources/bridges00010.png
+./resources/bridges00013.png
+./resources/bridges00016.png
+./resources/bridges00019.png
+./resources/bridges00022.png
+./resources/bridges00025.png
+./resources/bridges00028.png
+./resources/bridges00031.png
+./resources/bridges00034.png
+./resources/bridges00037.png
+./resources/bridges00040.png
+./resources/bridges00043.png
+./resources/bridges00046.png
+./resources/bridges00049.png
+./resources/bridges00052.png
+./resources/bridges00055.png
+./resources/bridges00058.png
+./resources/bridges00061.png
+./resources/bridges00064.png
+./resources/bridges00067.png
+./resources/bridges00070.png
+./resources/bridges00073.png
+./resources/bridges00076.png
+./resources/bridges00079.png
+./resources/bridges00082.png
+./resources/bridges00085.png
+./resources/bridges00088.png
+./resources/bridges00091.png
+./resources/bridges00094.png
+./resources/bridges00097.png
+./resources/bridges00100.png
+./resources/bridges00103.png
+./resources/bridges00106.png
+./resources/bridges00109.png
+./resources/bridges00112.png
+./resources/bridges00115.png
+./resources/bridges00118.png
+./resources/bridges00121.png
+./resources/bridges00124.png
+./resources/bridges00127.png
+./resources/bridges00130.png
+./resources/bridges00133.png
+./resources/bridges00136.png
+./resources/bridges00139.png
+./resources/bridges00142.png
+./resources/bridges00145.png
+./resources/bridges00148.png
+./resources/bridges00151.png
+./resources/bridges00154.png
+./resources/bridges00157.png
+./resources/bridges00160.png
+./resources/bridges00163.png
+./resources/bridges00166.png
+./resources/bridges00169.png
+./resources/bridges00172.png
+./resources/bridges00175.png
+./resources/bridges00178.png
+./resources/bridges00181.png
+./resources/bridges00184.png
+./resources/bridges00187.png
+./resources/bridges00190.png
+./resources/bridges00193.png
+./resources/bridges00196.png
+./resources/bridges00199.png
+./resources/bridges00202.png
+`;
+return data.split("\n")[index];
+}
+
+const frameCount = 67;
+
+const images = [];
+const imageSeq = {
+frame: 1,
+};
+
+for (let i = 0; i < frameCount; i++) {
+const img = new Image();
+img.src = files(i);
+images.push(img);
+}
+
+gsap.to(imageSeq, {
+frame: frameCount - 1,
+snap: "frame",
+ease: `none`,
+scrollTrigger: {
+  scrub: .5,
+  trigger: `#page5`,
+  start: `top top`,
+  end: `250% top`,
+  scroller: `#main`,
+},
+onUpdate: render,
+});
+
+images[1].onload = render;
+
+function render() {
+scaleImage(images[imageSeq.frame], context);
+}
+
+function scaleImage(img, ctx) {
+var canvas = ctx.canvas;
+var hRatio = canvas.width / img.width;
+var vRatio = canvas.height / img.height;
+var ratio = Math.max(hRatio, vRatio);
+var centerShift_x = (canvas.width - img.width * ratio) / 2;
+var centerShift_y = (canvas.height - img.height * ratio) / 2;
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.drawImage(
+  img,
+  0,
+  0,
+  img.width,
+  img.height,
+  centerShift_x,
+  centerShift_y,
+  img.width * ratio,
+  img.height * ratio
+);
+}
+ScrollTrigger.create({
+
+trigger: "#page5",
+pin: true,
+scroller: `#main`,
+start: `top top`,
+end: `250% top`,
+});
+}
+canvas1()
+
+
+var clutter = "";
+
+document.querySelector("#page6>h1").textContent.split("").forEach(function(dets){
+    clutter += `<span>${dets}</span>`
+
+    document.querySelector("#page6>h1").innerHTML = clutter;
+})
+
+gsap.to("#page6>h1>span",{
+  scrollTrigger:{
+      trigger:`#page6>h1>span`,
+      start:`top bottom`,
+      end:`bottom top`,
+      scroller:`#main`,
+      scrub:.1,
+  },
+  stagger:.1,
+  color:`#fff`
+})
 

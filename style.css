@@ -153,7 +153,7 @@ html,body{
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color:#2237ca;
+    background:linear-gradient(to right #2136c6,#2136c6);
     color: #fff;
     padding:0 9vw;
 }
@@ -436,7 +436,6 @@ html,body{
     width: 100vw;
     background-color: #000;
     color: #fff;
-    font-family: a;
     padding: 7vw 10vw;
 }
 #page13>h1{
@@ -451,5 +450,53 @@ html,body{
     color: #fff;
     border-radius: 50px;
     margin-top: 2vw;
+}
+
+/* ---------------page14---------------------- */
+#page14{
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    background-color: #000;
+}
+.page14-inner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 5vw;
+    height: 33.3%;
+    width: 100%;
+    color: #fff;
+    border-top: .5px solid #ffffff5c;
+    border-bottom: .5px solid #ffffff48;
+}
+.page14-inner>i{
+    font-weight: 100;
+    font-size: 2.4vw;
+    position: relative;
+    z-index: 9999;
+}
+.page14-inner>h1{
+    font-size: 3vw;
+    font-weight: 100;
+    position: relative;
+    z-index: 9999;
+}
+
+.center14{
+    height: 0%;
+    width: 100%;
+    background-color: #0a3cce;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all ease .5s;
+}
+
+
+.page14-inner:hover .center14{
+    height: 100%;
 }
 

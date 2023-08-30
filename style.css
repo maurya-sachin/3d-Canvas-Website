@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background-color: #000;
+    color: #fff;
+}
+
 html,body{
     height: 100%;
     width: 100%;
@@ -69,11 +74,12 @@ html,body{
 }
 
 #page1-bottom>h1{
+    position: absolute;
     color: #fff;
     font-size: 105px;
     font-weight: 300;
     line-height: 1;
-
+    z-index: 99;
 }
 
 #bottom-btn{

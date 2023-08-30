@@ -22,14 +22,13 @@ html,body{
 #page1{
     height: 100vh;
     width: 100vw;
-    background-color: red;
     position: relative;
 }
 
 #page1 video{
     height: 100%;
     width: 100%;
-object-fit: cover;
+    object-fit: cover;
 }
 
 #page1>nav{
@@ -431,5 +430,26 @@ object-fit: cover;
 }
 
 /* -----------------page13----------------------- */
-
+#page13{
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    font-family: a;
+    padding: 7vw 10vw;
+}
+#page13>h1{
+    font-size: 5vw;
+    line-height: 1;
+    font-weight: 100;
+}
+#page13>button{
+    padding: 18px 30px;
+    border: none;
+    background-color: #0a3cce;
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 2vw;
+}
 

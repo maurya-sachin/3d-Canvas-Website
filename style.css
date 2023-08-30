@@ -17,6 +17,7 @@ html,body{
     overflow: hidden;
 }
 
+/* -------------------------------page1--------------------------------------- */
 #page1{
     height: 100vh;
     width: 100vw;
@@ -100,4 +101,31 @@ object-fit: cover;
 #bottom-btn>h2{
     font-size: 21px;
     font-weight: 300;
+}
+/* -----------------------page2------------------------ */
+#page2{
+    display: flex;
+    justify-content:start;
+    align-items:start;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    padding: 4vh 9vw;
+    background-color: #243dce;
+    position: relative;
+    color: #fff;
+}
+
+#page2>h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 2vw;
+}
+
+#page2>h1{
+    width: 98%;
+    font-size: 4vw;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #4664d8;
 }
